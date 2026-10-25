@@ -549,7 +549,7 @@ namespace {
         // v2.57: hidden in practice mode (practice runs can't be submitted, and it crowded the
         // checkpoint buttons); always shown in normal mode while the buffer is on.
         auto* layer = GameManager::get()->m_playLayer;
-        buf.watermark->setVisible(buf.enabled && !(layer && layer->m_isPracticeMode));
+        buf.watermark->setVisible(false);
         buf.watermark->setString(fmt::format("Click Before Frames  |  {}", stageText()).c_str());
     }
 
